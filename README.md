@@ -32,13 +32,11 @@ FamilySize: Number of family members (SibSp + Parch + 1)
 IsAlone: Indicator if the passenger is alone (1 if alone, 0 otherwise)
 Installation
 Clone the repository:
-bash
-Copy code
+
 git clone https://github.com/yourusername/titanic-survival-prediction.git
 cd titanic-survival-prediction
 Install the required dependencies:
-bash
-Copy code
+
 pip install -r requirements.txt
 Data Preprocessing
 Fill Missing Values: Fill missing values in the Age and Fare columns with their median values.
@@ -54,15 +52,13 @@ n_estimators=100
 random_state=42 for reproducibility
 To train the model, run:
 
-python
-Copy code
+
 rf_model.fit(X_train_scaled, y_train)
 Evaluation
 Accuracy: Compared with the baseline gender-based predictions, achieving an accuracy of 81.34%.
 Cross-Validation: Achieved a mean cross-validation score of 0.8115.
 Classification Report and Confusion Matrix for further insights into model performance.
-python
-Copy code
+
 print(classification_report(y_train, y_train_pred))
 sns.heatmap(confusion_matrix(y_train, y_train_pred), annot=True, cmap='Blues')
 Visualization
@@ -72,8 +68,7 @@ Distribution Plots:
 Age and Fare distributions with survival hue.
 Feature Importance:
 A bar plot showcasing feature importance scores.
-python
-Copy code
+
 sns.barplot(x='importance', y='feature', data=importances)
 plt.title('Feature Importances')
 File Descriptions
